@@ -1,3 +1,9 @@
+:root{
+    --main-color: #0ABAB5;
+    --main-color-enabled: #40E0D0;
+    --red-color: #c50000;
+}
+
 .bottom-bar-home {
     position: fixed;
     bottom: 0;
@@ -19,13 +25,16 @@
     width: 50px;
     height: 50px;
     border: none;
-    border-radius: 15px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    border-radius: 50px 100%;
+    transition: all 0.5s;
 }
 
 .player-head:hover {
     border-radius: 5px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    transition: all 0.5s;
+    animation: ease-in-out;
+    transform: scale(1.06);
+    box-shadow: 0 0 10px var(--main-color-enabled), 0 0 40px var(--main-color-enabled), 0 0 10px var(--main-color-enabled);
 }
 
 .settings-btn {
@@ -33,15 +42,26 @@
     top: 10px;
     right: 30px;
     text-align: center;
+    background-color: var(--main-color);
+    border-radius: 50px 100%;
+    color: black;
     height: 50px;
     border: none;
-    border-radius: 15px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    transition: all .5s;
+    box-shadow: 0 0 5px var(--main-color-enabled);
+    cursor: pointer;
+
 }
 
 .settings-btn:hover {
     border-radius: 5px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+    transition: all .5s ;
+    border-radius: 5px;
+    background-color: var(--main-color-enabled);
+    animation: ease-in-out;
+    transform: scale(1.06);
+    box-shadow: 0 0 10px var(--main-color-enabled), 0 0 40px var(--main-color-enabled), 0 0 10px var(--main-color-enabled);
+    color: white;
 }
 
 .icon-settings:before {
@@ -54,23 +74,32 @@
     transform: translate(-50%);
     height: 100%;
     color: #F1F1F1;
-    font: normal normal bold 19px/29px Poppins;
+    font: normal normal bold 19px/29px Montserrat;
     text-align: center;
 }
 
 .play-btn {
     top: 10px;
-    width: 160px;
-    height: 37px;
+    width: 180px;
+    height: 45px;
     border-radius: 20px;
     border: none;
-    background: #00bd7a;
-    font: normal normal bold 20px/25px Poppins;
+    margin-top: 14px;
+    background-color: var(--main-color);
+    font: normal normal bold 20px/25px Montserrat;
     color: #121212;
-    margin: 15px 0;
-    box-shadow: 0 0 5px #00bd7a;
+    box-shadow: 0 0 5px var(--main-color-enabled);
+    cursor: pointer;
+    transition: .5s;
 }
 
+.play-btn:hover {
+    background-color: var(--main-color-enabled);
+    color: #F1F1F1;
+    animation: ease-in-out;
+    transform: scale(1.06);
+    box-shadow: 0 0 10px var(--main-color-enabled), 0 0 40px var(--main-color-enabled), 0 0 10px var(--main-color-enabled);
+}
 .download-content {
     position: absolute;
     top: 50%;
@@ -98,7 +127,7 @@
 }
 
 .progress-bar::-webkit-progress-value {
-    background-color: #00bd7a;
+    background-color: var(--main-color);
     border-radius: 10px;
 }
 
@@ -146,7 +175,7 @@
 
 .title {
     position: absolute;
-    font: normal normal bold 27px/40px Poppins;
+    font: normal normal bold 27px/40px Montserrat;
     letter-spacing: 0px;
     color: #E1E1E1;
     display: flex;
@@ -159,7 +188,7 @@
     left: 30px;
     transform: translate(0, -50%);
     overflow: hidden;
-    line-height: 25px;
+    line-height: 0;
     align-items: center;
     height: 3em;
     transition: color .2s;
@@ -167,13 +196,13 @@
 
 .date {
     position: absolute;
-    top: 15px;
+    top: 0;
     right: 20px;
     color: #E1E1E1;
     width: 75px;
     text-align: center;
     font-weight: 900;
-    font-family: Poppins;
+    font-family: Montserrat;
     transition: color .2s;
 }
 
@@ -197,7 +226,7 @@
     position: relative;
     padding: 20px;
     background-color: #1f1f1f;
-    font-family: Poppins;
+    font-family: Montserrat;
     font-size: 13px !important;
     color: #E1E1E1;
     text-decoration: none;
@@ -229,7 +258,58 @@
     background-color: #292929;
     border-radius: 10px;
     transition: opacity 1s;
-    opacity: .4;
+    opacity: .7;
+}
+
+.social-media {
+    display: flex;
+
+    align-self: center;
+    align-items: center;
+    justify-content: right;
+
+    max-width: 640px;
+}
+
+li {
+    list-style-type: none;
+}
+
+i {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+
+.links {
+    display: flex;
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    width: 55px;
+    height: 55px;
+
+    margin-top: 25px;
+
+    border-radius: 50px 100%;
+
+    transition: all .5s;
+    cursor: pointer;
+
+    box-shadow: 0 0 5px black;
+    background-color: rgba(41, 41, 41);
+    opacity: 0.7;
+}
+.links:hover  {
+    opacity: 1;
+    box-shadow: 0 0 10px var(--main-color-enabled), 0 0 40px var(--main-color-enabled), 0 0 10px var(--main-color-enabled);
+    animation: ease-in-out;
+    transform: scale(1.06);
+    border-radius: 5px;
 }
 
 .server:hover {
@@ -239,15 +319,15 @@
 
 .server-img {
     position: absolute;
-    width: 42px;
-    height: 45px;
-    top: 15px;
-    left: 15px;
+    width: 50px;
+    height: 50px;
+    top: 13px;
+    left: 12px;
 }
 
 .name {
     position: absolute;
-    font: normal normal bold 17px/25px Poppins;
+    font: normal normal bold 17px/25px Montserrat;
     color: #E1E1E1;
     top: 17px;
     left: 70px;
@@ -256,7 +336,7 @@
 
 .desc {
     position: absolute;
-    font: normal normal normal 11px/17px Poppins;
+    font: normal normal normal 11px/17px Montserrat;
     color: #E1E1E1;
     transition: all .2s;
     top: 40px;
@@ -265,7 +345,7 @@
 }
 
 .green {
-    color: #1AC707;
+    color: rgb(9, 182, 9);
 }
 
 .red {
@@ -288,7 +368,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font: normal normal bold 13px/15px Poppins;
+    font: normal normal bold 13px/0 Montserrat;
     letter-spacing: 0px;
     color: #E1E1E1;
     transition: color .2s;
@@ -303,7 +383,7 @@
     border-radius: 10px;
     border: 2px solid #1A1A1A;
     transition: all .2s;
-    background-color: #1AC707;
+    background-color: var(--main-color);
 }
 
 .online.off {

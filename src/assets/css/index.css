@@ -1,7 +1,12 @@
 @import "font.css";
+
+:root{
+    --main-color: #0ABAB5;
+    --main-color-enabled: #40E0D0;
+}
+
 body {
-    background-color: #000000;
-    font-family: "Poppins";
+    font-family: "Montserrat";
     letter-spacing: 0px;
     -webkit-app-region: drag;
     user-select: none;
@@ -14,12 +19,13 @@ img {
 
 .splash {
     position: absolute;
-    top: 180px;
+    top: 200px;
     left: 50%;
+    bottom: 50px;
     transform: translate(-50%);
-    width: 140px;
-    height: 140px;
-    transition: opacity .3s, top 1.5s;
+    width: 300px;
+    height: 300px;
+    transition: opacity .3s, top 1.3s;
     opacity: 0;
 }
 
@@ -28,7 +34,7 @@ img {
 }
 
 .splash.translate {
-    top: 129px;
+    top: 90px;
 }
 
 .splash-message {
@@ -36,7 +42,7 @@ img {
     top: 289px;
     left: 0px;
     width: 400px;
-    font: normal normal bold 19px/29px Poppins;
+    font: normal normal bold 19px/29px Montserrat;
     text-align: center;
     letter-spacing: 0px;
     transition: opacity 1.5s;
@@ -55,13 +61,13 @@ img {
     width: 400px;
     text-align: center;
     transition: opacity 1.5s;
-    font: normal normal normal 9px/13px Poppins;
+    font: normal normal normal 9px/13px Montserrat;
     color: rgb(255, 255, 255);
     opacity: 0;
 }
 
 .splash-author .author {
-    font: normal normal bold 9px/13px Poppins;
+    font: normal normal bold 9px/13px Montserrat;
 }
 
 .splash-author.opacity {
@@ -75,7 +81,7 @@ img {
     width: 400px;
     text-align: center;
     transition: opacity 1.5s;
-    font: normal normal bold 18px/27px Poppins;
+    font: normal normal bold 18px/27px Montserrat;
     color: rgb(255, 255, 255);
     opacity: 0;
 }

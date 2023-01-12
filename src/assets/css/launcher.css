@@ -5,6 +5,8 @@
 
 * {
     outline: none;
+    --animation-duration: 3.5s;
+    --animation-delay-multiplier: 200ms;
 }
 
 body {
@@ -12,6 +14,7 @@ body {
     padding: 0;
     user-select: none;
     background: linear-gradient(#00000066, #00000066), url("../images/background/light.jpg") black no-repeat center center scroll;
+    background-size: 100%;
 }
 
 img {
@@ -135,7 +138,7 @@ img {
 }
 
 .preload-title {
-    font: normal normal bold 30px/40px Poppins;
+    font: normal normal bold 30px/40px Montserrat;
     color: #E1E1E1;
     text-align: center;
     margin: 2em 0;
@@ -169,3 +172,99 @@ img {
         transform: rotate(359deg);
     }
 }
+
+.load-wrapper {
+    display: flex;
+    position: relative;
+  }
+  
+  .load-circle {
+    display: flex;
+  
+    height: 40px;
+    width: 40px;
+  
+    align-items: center;
+    justify-content: center;
+    margin: 0!important;
+    margin-left: 5px;
+    border-radius: 50%;
+  
+    color: #FFF;
+    font: bold 26px/1 "Montserrat", sans-serif;
+  }
+  
+  .load-circle:nth-child(1) {
+    animation: wave var(--animation-duration) infinite;
+  }
+  
+  .load-circle:nth-child(2) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 1);
+  }
+  
+  .load-circle:nth-child(3) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 2);
+  }
+  
+  .load-circle:nth-child(4) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 3);
+  }
+  
+  .load-circle:nth-child(5) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 4);
+  }
+  
+  .load-circle:nth-child(6) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 5);
+  }
+  
+  .load-circle:nth-child(7) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 6);
+  }
+  
+  .load-circle:nth-child(8) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 7);
+  }
+  
+  .load-circle:nth-child(9) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 8);
+  }
+  
+  .load-circle:nth-child(10) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 9);
+  }
+  
+  .load-circle:nth-child(11) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 10);
+  }
+  
+  .load-circle:nth-child(12) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 11);
+  }
+  
+  .load-circle:nth-child(13) {
+    animation: wave var(--animation-duration) infinite calc(var(--animation-delay-multiplier) * 12);
+  }
+  
+  
+  @keyframes wave {
+    0% {
+      transform: translateX(0px) translateY(0px);
+    }
+  
+    25% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(-50px);
+    }
+  
+    51% {
+      transform: translateY(-50px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
