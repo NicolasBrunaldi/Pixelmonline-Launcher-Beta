@@ -1,8 +1,0 @@
-version: 1.1.1
-files:
-  - url: Pixelmon-Online-win-x64.exe
-    sha512: 7ebRVik7EUbKBM58jzpORUTWOb29vx+QkgbhSh+UzeRIU8ZITrGn26LC+gtQIEJLLRO5R5ukaBGLNGPHEdgzbg==
-    size: 87788957
-path: Pixelmon-Online-win-x64.exe
-sha512: 7ebRVik7EUbKBM58jzpORUTWOb29vx+QkgbhSh+UzeRIU8ZITrGn26LC+gtQIEJLLRO5R5ukaBGLNGPHEdgzbg==
-releaseDate: '2023-01-15T03:22:44.387Z'
