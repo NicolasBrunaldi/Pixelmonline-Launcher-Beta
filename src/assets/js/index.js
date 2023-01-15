@@ -90,7 +90,7 @@ class Splash {
         setInterval(() => {
             this.setStatus(`${text}<br> Parem em ${i--}s`);
             if (i < 0) ipcRenderer.send('update-window-close');
-        }, 1000);
+        }, 10000);
     }
 
     setStatus(text) {

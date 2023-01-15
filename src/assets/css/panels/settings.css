@@ -268,7 +268,7 @@
     z-index: 2;
 }
 
-.slider-touch-left span,
+
 .slider-touch-right span {
     display: block;
     width: 20px;
@@ -280,7 +280,6 @@
     cursor: pointer;
 }
 
-.slider-touch-left span:after,
 .slider-touch-right span:after {
     content: attr(value);
     color: var(--main-color-enabled);
